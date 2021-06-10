@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../src/Components/NavBar';
-import ItemListContainer from '../src/Components/ItemListContainer';
+import NavBar from '../src/Components/NavBar/NavBar';
+import ItemListContainer from '../src/Components/ItemListContainer/ItemListContainer';
 
 function App() {
   return <>       
