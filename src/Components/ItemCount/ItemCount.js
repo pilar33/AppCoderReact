@@ -1,5 +1,5 @@
-import { react,useState, useEffect } from 'react';
-import { FaRegMinusSquare,FaRegPlusSquare,FaTachometerAlt  } from "react-icons/fa";
+import { react,useState} from 'react';
+import { FaRegMinusSquare,FaRegPlusSquare } from "react-icons/fa";
 
 const ItemCount = ({stock, inicial, onAdd}) => {
     //hook
