@@ -27,10 +27,10 @@ const ItemList = ({items}) => {
            <h1>Lista de Productos</h1>
            <div>
               {
-               productos.map((item,i) => {
+               productos.map((item) => {
                 console.log(item);
                 return ( 
-                        <Item key={i} item={item} />
+                        <Item key={item.id} item={item} />
                     );                   
                })
             }
