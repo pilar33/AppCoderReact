@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { useParams} from 'react-router-dom';
 
 
-const ItemDetail = ({item}) => {
-  console.log(item.pictureUrl);
+const ItemDetail = ({item}) => {  
+  const {id} = useParams();
     return (
             <div className="column is-half">
-              <h4>Item Detail</h4>
+              <h4>Item Detail: {id} </h4>
             <div className="box">
               <div className="media">
               <div className="media-left">

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../../src/Components/Item/Item.css';
 
 const Item = ({item}) => {
+    console.log(item);
     return (
      <div className="column is-half">
          <div className="box">
@@ -9,7 +10,7 @@ const Item = ({item}) => {
             <div className="media-left">
                 <figure className="image is-64x64">
                 <img
-                    src="https://bulma.io/images/placeholders/128x128.png"
+                    src={item.pictureUrl}
                     alt={item.description}
                 />
                 </figure>
