@@ -10,7 +10,7 @@ const NavBar = () => {
              <div className="col-md-6">
                 <h1><FaQuinscape/> WORLD FINTECH</h1>
              </div> 
-             <div className="col-md-3"><CardWidget/> HOME</div>
+             <div className="col-md-3"><CardWidget/> INICIO</div>
              <div className="col-md-3"><FaUserAlt/> INGRESO | REGISTRO</div>
            </div>
            

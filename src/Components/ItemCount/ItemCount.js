@@ -1,4 +1,4 @@
-import { react,useState} from 'react';
+import {useState} from 'react';
 import { FaRegMinusSquare,FaRegPlusSquare } from "react-icons/fa";
 
 const ItemCount = ({stock, inicial, onAdd}) => {

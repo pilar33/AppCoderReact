@@ -1,5 +1,6 @@
-import  { react,useState, useEffect } from 'react'
+import  {useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { container, columns } from 'react-bulma-components';
 
 const ItemDetailContainer = ({item}) => {
 
@@ -23,12 +24,10 @@ const ItemDetailContainer = ({item}) => {
     },[]) 
 
     return (
-        <div>
-            <h1>Detalle del Producto</h1>
-           <div>             
-                <ItemDetail item={item} />
-          </div> 
-
+        <div className="container">
+           <div className="column columns is-multiline">             
+                <ItemDetail item={detailItem} /> 
+           </div> 
         </div>
     )
 }

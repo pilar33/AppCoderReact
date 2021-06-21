@@ -1,9 +1,10 @@
 import { react,useState, useEffect } from 'react';
 import Item from '../Item/Item';
-
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import 'react-bulma-components';
 
 const ItemList = ({items}) => {
-    const [productos,setProductos] = useState([items]);
+    const [productos,setProductos] = useState(items);
 
     useEffect(() =>{
         const promises = new Promise((resolve, reject) => {
@@ -24,19 +25,29 @@ const ItemList = ({items}) => {
 
     return (
         <div>
-           <h1>Lista de Productos</h1>
-           <div>
+           <h1><center>Lista de Productos</center></h1>
+           
               {
-               productos.map((item) => {
+               productos.map((item,i) => {
                 console.log(item);
-                return ( 
-                        <Item key={item.id} item={item} />
-                    );                   
+                return (
+                      <div className="container">  
+                        <div className="row">                    
+                            <div className="col-md-6">
+
+                                <Item key={item.id} item={item} />
+                            </div>
+                            <div className="col-md-6">
+                                <ItemDetailContainer key={item.i} item={item}  /> 
+                            </div>
+                        </div>   
+                     </div>       
+                     );                   
                })
             }
 
           
-          </div>     
+             
         </div>
     )
 }
