@@ -1,50 +1,37 @@
-import { react,useState, useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import Item from '../Item/Item';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
+//import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import 'react-bulma-components';
 
 const ItemList = ({items}) => {
-    console.log(items);
-    const [productos,setProductos] = useState(items);
+
+    const [productos,setProductos] = useState({items});
 
     useEffect(() =>{
-        const promises = new Promise((resolve, reject) => {
+        const promisesItemList = new Promise((resolve, reject) => {
             setTimeout(() => {
-                items.length > 0 ? resolve(items): reject("No hay productos");
+                resolve({items});
             }      
             ,2000);
         })
-        promises.then((data) => {
-            console.log('datos ItemList: ' + data);
-            setProductos(data);
+        promisesItemList.then((data) => {
+                console.log('datos ItemList: ' + data);           
+                 console.log(data); 
+                 
+                setProductos(data);
+          
          })
         .catch((err) => {
             console.log(err);
         })
         .finally((response) =>console.log(response))    
-    },[]) 
+    },[])  
 
     return (
-        <div>                     
-            { 
-               productos.map((item) => {
-                console.log(item);
-                return (
-                      <div className="container">  
-                        <div className="row">                    
-                            <div className="col-md-6">
-
-                                <Item key={item.id} item={item} />
-                            </div>                       
-                        </div>   
-                     </div>       
-                     );                   
-               })
-            } 
-
-        
-             
+        <div>
+            {
+              items.map((product) =>  <Item key={product.id} item={product} />)
+            }         
         </div>
     )
 }

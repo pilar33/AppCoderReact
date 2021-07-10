@@ -2,9 +2,9 @@ import React from 'react';
 import {Route, BrowserRouter,Switch} from 'react-router-dom';
 import "./App.css";
 import NavBar from '../src/Components/NavBar/NavBar';
+import Home from '../src/Components/Home/Home';
 import ItemListContainer from '../src/Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../src/Components/ItemDetailContainer/ItemDetailContainer';
-import "react-bulma-components";
 
 
 const App = () =>{
@@ -12,11 +12,11 @@ const App = () =>{
         <BrowserRouter>
           <NavBar/> 
            <Switch>
-            <Route exact path="/">
-                 <ItemListContainer greeting="Listado de Productos"/>
-            </Route>
-            <Route exact path="/category/:id">
-                 <ItemListContainer greeting="Producto: " />
+           <Route exact path="/">
+                 <Home />
+            </Route>             
+            <Route exact path="/ItemListContainer/:id">
+                 <ItemListContainer greeting="Productos de la categoría " />
             </Route>
             <Route exact path="/item/:id" >
                <ItemDetailContainer /> 

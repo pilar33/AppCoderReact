@@ -1,10 +1,11 @@
-import React from 'react'
-import { FaCartPlus } from 'react-icons/fa'
+import React from 'react';
+import '../../../src/Components/NavBar.css';
+import { FaCartPlus } from 'react-icons/fa';
 
 const CardWidget = () => {
     return (
-        <div className="container-fluid">
-           <FaCartPlus/> 
+        <div>
+           <FaCartPlus color="white"/> 
         </div>
     )
 }
