@@ -28,10 +28,7 @@ productos:[
      ]
 }]; 
 
-const ItemListContainer = ({greeting}) => {
-   const onAdd = (product) => {
-       alert(`Has seleccionado ${product} producto en total.-`)
-   }
+const ItemListContainer = ({greeting}) => {  
    const {id} = useParams();
    
    const productCategoryList = (id === undefined) ?  productList : productList.filter((producto) => {if (producto.categoryId == id) { return producto.productos }});

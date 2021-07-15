@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
 
    
     const {id} = useParams();//idItem
-    console.log(id);
+   // console.log(id);
     let product_ = [];
     productList.forEach((product) =>{
                        // console.log(product);

@@ -29,7 +29,7 @@ const Item = ({item}) => {
 
     return (
        <div className="row">   
-       <NavLink style={style} to={'/Item/' + item.id}>
+       <Link style={style} to={'/Item/' + item.id}>
           <div className="col-lg-2 col-md-2 col-sm-2"></div>
            <div className="col-lg-4 col-md-4 col-sm-4">
                 <figure className="image is-64x64">
@@ -47,7 +47,7 @@ const Item = ({item}) => {
                 <div>{item.description}</div>
            </div>
            <div className="col-lg-2 col-md-2 col-sm-2"></div>
-        </NavLink>
+        </Link>
      </div> 
      
         
