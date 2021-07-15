@@ -1,7 +1,26 @@
-import React from 'react';
+import React, {useState, useEffect }  from 'react';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({item}) => {  
- 
+/*     console.log(item);
+    const [itemDetail,setItemDetail] = useState({item});
+    useEffect(() =>{        
+        const promises= new Promise((resolve, reject) => {
+           setTimeout(() => {               
+                resolve({item});
+           }      
+            ,2000);
+        })       
+        promises.then((data) => {
+          
+            setItemDetail(data);
+          
+         })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally((response) =>console.log(response))    
+    },[])  */ 
     return (
       <div className="row">  
       <div className="col-lg-2 col-md-2 col-sm-2"></div>

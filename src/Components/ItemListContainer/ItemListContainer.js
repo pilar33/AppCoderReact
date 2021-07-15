@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react';
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import { useParams} from 'react-router-dom';
 //import productList from '../../../src/data/productos.json';
@@ -33,8 +32,9 @@ const ItemListContainer = ({greeting}) => {
    const onAdd = (product) => {
        alert(`Has seleccionado ${product} producto en total.-`)
    }
-   const {id} = useParams();//idcategory
-   const productCategoryList = productList.filter((producto) => {if (producto.categoryId == id) { return producto.productos }});
+   const {id} = useParams();
+   
+   const productCategoryList = (id === undefined) ?  productList : productList.filter((producto) => {if (producto.categoryId == id) { return producto.productos }});
 
    const [itemList,setItem] = useState(productCategoryList);
    

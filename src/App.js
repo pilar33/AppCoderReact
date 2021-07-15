@@ -12,13 +12,13 @@ const App = () =>{
         <BrowserRouter>
           <NavBar/> 
            <Switch>
-           <Route exact path="/">
-                 <Home />
+           <Route exact path="/ItemListContainer/">
+              <ItemListContainer greeting="" />
             </Route>             
             <Route exact path="/ItemListContainer/:id">
                  <ItemListContainer greeting="Productos de la categoría " />
             </Route>
-            <Route exact path="/item/:id" >
+            <Route exact path="/Item/:id">
                <ItemDetailContainer /> 
             </Route>
            </Switch>

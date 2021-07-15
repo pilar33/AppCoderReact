@@ -1,12 +1,12 @@
 import {useState, useEffect } from 'react';
 import Item from '../Item/Item';
-//import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+
 import 'react-bulma-components';
+
 
 const ItemList = ({items}) => {
 
     const [productos,setProductos] = useState({items});
-
     useEffect(() =>{
         const promisesItemList = new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -30,7 +30,7 @@ const ItemList = ({items}) => {
     return (
         <div>
             {
-              items.map((product) =>  <Item key={product.id} item={product} />)
+              items.map((product) => <Item key={product.id} item={product} />)
             }         
         </div>
     )

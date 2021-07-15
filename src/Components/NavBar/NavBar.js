@@ -17,7 +17,7 @@ const NavBar = () => {
       
       <div className="row topnav">                    
          <div className="col-lg-1 col-md-1">
-              <NavLink activeClassName="active" exact to={'/'}>HOME</NavLink>
+              <NavLink activeClassName="active" exact to={'/ItemListContainer/'}>HOME</NavLink>
          </div>  
           <div className="col-lg-2 col-md-2 dropdown">
               <button className="dropbtn">PRODUCTOS 
